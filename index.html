@@ -74,6 +74,96 @@ section{padding:96px 0}
 .pill{display:inline-flex;align-items:center;gap:6px;padding:5px 14px;border-radius:999px;font-weight:600;font-size:0.78rem;transition:all var(--transition)}
 .pill-ready{background:var(--success);color:var(--success-text)}.pill-published{background:#e0e7ff;color:#3730a3}.pill-default{background:rgba(15,23,42,0.04);color:var(--muted)}
 .demo-label{position:absolute;top:-12px;right:20px;font-size:0.68rem;padding:4px 12px;background:rgba(255,255,255,0.9);border:1px solid var(--stroke);border-radius:999px;color:var(--muted);z-index:2;font-weight:500;backdrop-filter:blur(8px)}
+.problems-grid,.benefits-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.problem-card{background:rgba(255,255,255,0.7);border:1px solid var(--stroke);border-radius:var(--radius-lg);padding:30px 26px;box-shadow:var(--shadow-sm)}.problem-card:hover{border-color:rgba(15,23,42,0.14)}.problem-icon{width:48px;height:48px;border-radius:14px;display:grid;place-items:center;font-size:1.4rem;margin-bottom:20px}
+.problem-card:nth-child(1) .problem-icon{background:linear-gradient(135deg,rgba(239,68,68,0.12),rgba(239,68,68,0.04))}
+.problem-card:nth-child(2) .problem-icon{background:linear-gradient(135deg,rgba(245,158,11,0.14),rgba(245,158,11,0.04))}
+.problem-card:nth-child(3) .problem-icon{background:linear-gradient(135deg,rgba(99,102,241,0.12),rgba(99,102,241,0.04))}
+.problem-card h3{font-size:1.15rem;margin-bottom:10px}.problem-card p{color:var(--muted);font-size:0.95rem;line-height:1.55}
+.steps-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;position:relative}
+.steps-grid::before{content:"";position:absolute;top:40px;left:calc(12.5% + 19px);right:calc(12.5% + 19px);height:2px;background:linear-gradient(90deg,rgba(91,124,255,0.2),rgba(91,124,255,0.5),rgba(91,124,255,0.2));z-index:0}
+.step-card{background:rgba(255,255,255,0.76);border:1px solid var(--stroke);border-radius:var(--radius-lg);padding:28px 22px 24px;text-align:center;position:relative;z-index:1;box-shadow:var(--shadow-sm)}.step-card:hover{transform:translateY(-3px)}
+.step-num{width:40px;height:40px;border-radius:50%;display:grid;place-items:center;margin:0 auto 18px;background:linear-gradient(135deg,#0f172a,#1d4ed8);color:white;font-weight:700;font-size:0.95rem;box-shadow:0 8px 20px rgba(29,78,216,0.3);position:relative;z-index:2}
+.step-card h3{font-size:1.05rem;margin-bottom:8px}.step-card p{color:var(--muted);font-size:0.9rem;line-height:1.5}
+.benefit-card{background:linear-gradient(180deg,rgba(255,255,255,0.82),rgba(248,250,254,0.82));border:1px solid var(--stroke);border-radius:var(--radius-lg);padding:32px 26px;box-shadow:var(--shadow-sm);position:relative;overflow:hidden}
+.benefit-card::after{content:"";position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,#1d4ed8,#5b7cff);opacity:0}.benefit-card:hover::after{opacity:1}.benefit-card:hover{transform:translateY(-4px)}
+.benefit-icon{width:52px;height:52px;border-radius:14px;display:grid;place-items:center;font-size:1.5rem;background:linear-gradient(135deg,rgba(91,124,255,0.14),rgba(15,23,42,0.05));margin-bottom:20px}
+.benefit-card h3{font-size:1.2rem;margin-bottom:10px}.benefit-card p{color:var(--muted);font-size:0.93rem;line-height:1.55}
+.demo-showcase{background:linear-gradient(180deg,rgba(255,255,255,0.9),rgba(240,245,255,0.9));border:1px solid var(--stroke);border-radius:var(--radius-xl);box-shadow:var(--shadow-lg);padding:clamp(24px,4vw,44px);max-width:700px;margin:0 auto}
+.demo-showcase .chat-bubbles{min-height:300px}
+.demo-controls{display:flex;align-items:center;justify-content:center;gap:16px;margin-top:20px;flex-wrap:wrap}
+.demo-control-btn{width:44px;height:44px;border-radius:50%;display:grid;place-items:center;background:white;border:1px solid var(--stroke);font-size:1.1rem;box-shadow:var(--shadow-sm)}.demo-control-btn:hover:not(:disabled){background:var(--primary);color:white}.demo-control-btn:disabled{opacity:0.3}
+.demo-step-indicator{display:flex;gap:8px}.demo-dot{width:8px;height:8px;border-radius:50%;background:rgba(15,23,42,0.15)}.demo-dot.active{background:var(--accent);box-shadow:0 0 0 4px rgba(91,124,255,0.2);transform:scale(1.3)}
+.onboarding-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.onboard-card{background:rgba(255,255,255,0.72);border:1px solid var(--stroke);border-radius:var(--radius-lg);padding:28px 22px;text-align:center}
+.onboard-num{width:44px;height:44px;border-radius:50%;margin:0 auto 16px;display:grid;place-items:center;border:2px solid var(--accent);color:var(--accent);font-weight:700;font-size:1.1rem}
+.onboard-card h3{font-size:1.1rem;margin-bottom:8px}.onboard-card p{color:var(--muted);font-size:0.9rem;line-height:1.5}
+.pricing-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;align-items:start}
+.pricing-card{background:rgba(255,255,255,0.7);border:1px solid var(--stroke);border-radius:var(--radius-lg);padding:34px 28px 30px;position:relative;box-shadow:var(--shadow-sm)}
+.pricing-card.featured{background:white;border-color:var(--accent);box-shadow:var(--shadow-lg);transform:scale(1.03);z-index:2}
+.pricing-badge{position:absolute;top:-14px;left:50%;transform:translateX(-50%);padding:6px 18px;border-radius:999px;background:linear-gradient(135deg,#1d4ed8,#5b7cff);color:white;font-size:0.78rem;font-weight:700;box-shadow:0 8px 20px rgba(29,78,216,0.3)}
+.pricing-name{font-size:1.1rem;font-weight:700;margin-bottom:6px}
+.pricing-subtitle{color:var(--muted);font-size:0.88rem;margin-bottom:20px;line-height:1.4}
+.pricing-price{font-size:clamp(2rem,3vw,2.6rem);font-weight:800;letter-spacing:-0.04em;margin-bottom:4px}
+.pricing-period{color:var(--muted);font-size:0.85rem;margin-bottom:22px}
+.pricing-features{display:grid;gap:12px;margin-bottom:26px}
+.pricing-features li{display:flex;align-items:flex-start;gap:10px;font-size:0.92rem;color:var(--muted);line-height:1.4}
+.pricing-features li::before{content:"✓";color:#22c55e;font-weight:700;flex-shrink:0}.pricing-cta .btn{width:100%}
+.nfc-card{background:linear-gradient(135deg,rgba(255,255,255,0.9),rgba(240,245,255,0.88));border:1px solid var(--stroke);border-radius:var(--radius-xl);padding:32px 36px;max-width:800px;margin:40px auto 0;display:flex;align-items:center;gap:28px;flex-wrap:wrap;box-shadow:var(--shadow-sm)}.nfc-icon{width:64px;height:64px;border-radius:18px;display:grid;place-items:center;font-size:1.8rem;flex-shrink:0;background:linear-gradient(135deg,rgba(99,102,241,0.15),rgba(91,124,255,0.08))}
+.nfc-info{flex:1;min-width:240px}.nfc-info h3{margin-bottom:6px;font-size:1.2rem}.nfc-info p{color:var(--muted);font-size:0.93rem;line-height:1.5}.nfc-cta{flex-shrink:0}
+.objection-card{background:rgba(255,255,255,0.72);border:1px solid var(--stroke);border-radius:var(--radius);padding:22px 22px 18px}.objection-card .q{font-weight:700;font-size:0.95rem;margin-bottom:8px;display:flex;align-items:flex-start;gap:8px}
+.objection-card .q::before{content:"?";color:var(--accent);font-weight:800}.objection-card .a{color:var(--muted);font-size:0.9rem;line-height:1.5}
+.faq-list{max-width:760px;margin:0 auto;display:grid;gap:12px}
+.faq-item{border:1px solid var(--stroke);border-radius:var(--radius);overflow:hidden;background:rgba(255,255,255,0.72)}
+.faq-question{width:100%;display:flex;align-items:center;justify-content:space-between;gap:12px;padding:20px 24px;font-weight:600;font-size:0.98rem;text-align:left;color:var(--text)}.faq-question::after{content:"+";font-size:1.3rem;color:var(--accent)}
+.faq-item.open .faq-question::after{content:"−";transform:rotate(180deg)}.faq-answer{max-height:0;overflow:hidden;transition:max-height 0.35s ease}.faq-item.open .faq-answer{max-height:300px}
+.faq-answer-inner{padding:0 24px 22px;color:var(--muted);font-size:0.93rem;line-height:1.6}
+.cta-final{background:linear-gradient(135deg,rgba(14,21,37,0.98),rgba(29,78,216,0.94));border-radius:var(--radius-xl);padding:clamp(36px,6vw,60px);text-align:center;color:white;box-shadow:0 30px 60px rgba(17,24,39,0.22)}.cta-final h2{color:white;margin-bottom:14px}
+.cta-final p{color:rgba(255,255,255,0.75);font-size:1.06rem;max-width:500px;margin:0 auto 28px}.cta-final .btn{font-size:1.05rem;padding:16px 34px}
+.demo-form-card{background:rgba(255,255,255,0.88);border:1px solid var(--stroke);border-radius:var(--radius-xl);padding:clamp(28px,4vw,44px);max-width:560px;margin:0 auto;box-shadow:var(--shadow)}
+.form-group{margin-bottom:18px}.form-group label{display:block;font-weight:600;font-size:0.9rem;margin-bottom:6px;color:var(--text)}
+.form-group input,.form-group select,.form-group textarea{width:100%;padding:12px 16px;border:1px solid var(--stroke);border-radius:12px;font-size:0.95rem;font-family:inherit;color:var(--text);background:white}
+.form-group input:focus,.form-group select:focus,.form-group textarea:focus{outline:none;border-color:var(--accent);box-shadow:0 0 0 3px rgba(91,124,255,0.12)}
+.form-group textarea{resize:vertical;min-height:90px}.form-submit{width:100%;padding:15px;font-size:1rem}
+.form-message{text-align:center;padding:14px;border-radius:12px;font-size:0.93rem;font-weight:600;margin-top:18px;display:none}
+.form-message.success{display:block;background:var(--success);color:var(--success-text)}.form-message.error{display:block;background:var(--error);color:var(--error-text)}
+footer{padding:50px 0 40px;border-top:1px solid rgba(15,23,42,0.07);background:rgba(255,255,255,0.4)}
+.footer-grid{display:flex;justify-content:space-between;gap:32px;flex-wrap:wrap;margin-bottom:28px}.footer-brand-col{min-width:200px}.footer-brand-col p{color:var(--muted);font-size:0.88rem;margin-top:8px}
+.footer-col h4{font-size:0.85rem;text-transform:uppercase;letter-spacing:0.08em;color:var(--muted);margin-bottom:14px}.footer-col ul{display:grid;gap:10px}
+.footer-col a{color:var(--muted);font-size:0.9rem}.footer-col a:hover{color:var(--text)}
+.footer-bottom{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;padding-top:22px;border-top:1px solid var(--stroke)}.footer-bottom p{color:var(--muted-light);font-size:0.82rem}
+@keyframes fadeInUp{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:translateY(0)}}
+.reveal{opacity:0;transform:translateY(24px);transition:opacity 0.6s ease,transform 0.6s ease}.reveal.visible{opacity:1;transform:translateY(0)}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:0.01ms!important;transition-duration:0.01ms!important;scroll-behavior:auto!important}}
+@media(max-width:1024px){.hero-grid{grid-template-columns:1fr;gap:36px}.hero-demo{max-width:500px;margin:0 auto}.steps-grid{grid-template-columns:repeat(2,1fr)}.steps-grid::before{display:none}.benefits-grid,.problems-grid,.onboarding-grid,.pricing-grid{grid-template-columns:repeat(2,1fr)}.pricing-card.featured{transform:none;margin-top:20px}.objections-grid{grid-template-columns:1fr}}
+@media(max-width:700px){.nav-links{display:none;position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(245,247,251,0.97);backdrop-filter:blur(20px);flex-direction:column;align-items:center;justify-content:center;gap:20px;z-index:100;font-size:1.15rem}.nav-links.open{display:flex}.nav-cta.desktop{display:none}.hamburger{display:flex}section{padding:64px 0}.hero{padding:40px 0 44px}.hero-actions{flex-direction:column;align-items:stretch}.hero-actions .btn{justify-content:center}.steps-grid{grid-template-columns:1fr}.benefits-grid,.problems-grid,.onboarding-grid,.pricing-grid{grid-template-columns:1fr}.pricing-card.featured{margin-top:0}.nfc-card{flex-direction:column;text-align:center;align-items:center}.objections-grid{grid-template-columns:1fr}.footer-grid{flex-direction:column;gap:24px}.footer-bottom{flex-direction:column;text-align:center}}
+.objections-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+.objection-card{background:rgba(255,255,255,0.72);border:1px solid var(--stroke);border-radius:var(--radius);padding:22px 22px 18px}.objection-card .q{font-weight:700;font-size:0.95rem;margin-bottom:8px;display:flex;align-items:flex-start;gap:8px}
+.objection-card .q::before{content:"?";color:var(--accent);font-weight:800}.objection-card .a{color:var(--muted);font-size:0.9rem;line-height:1.5}
+.faq-list{max-width:760px;margin:0 auto;display:grid;gap:12px}
+.faq-item{border:1px solid var(--stroke);border-radius:var(--radius);overflow:hidden;background:rgba(255,255,255,0.72)}
+.faq-question{width:100%;display:flex;align-items:center;justify-content:space-between;gap:12px;padding:20px 24px;font-weight:600;font-size:0.98rem;text-align:left;color:var(--text)}.faq-question::after{content:"+";font-size:1.3rem;color:var(--accent)}
+.faq-item.open .faq-question::after{content:"−";transform:rotate(180deg)}.faq-answer{max-height:0;overflow:hidden;transition:max-height 0.35s ease}.faq-item.open .faq-answer{max-height:300px}
+.faq-answer-inner{padding:0 24px 22px;color:var(--muted);font-size:0.93rem;line-height:1.6}
+.cta-final{background:linear-gradient(135deg,rgba(14,21,37,0.98),rgba(29,78,216,0.94));border-radius:var(--radius-xl);padding:clamp(36px,6vw,60px);text-align:center;color:white;box-shadow:0 30px 60px rgba(17,24,39,0.22)}.cta-final h2{color:white;margin-bottom:14px}
+.cta-final p{color:rgba(255,255,255,0.75);font-size:1.06rem;max-width:500px;margin:0 auto 28px}.cta-final .btn{font-size:1.05rem;padding:16px 34px}
+.demo-form-card{background:rgba(255,255,255,0.88);border:1px solid var(--stroke);border-radius:var(--radius-xl);padding:clamp(28px,4vw,44px);max-width:560px;margin:0 auto;box-shadow:var(--shadow)}
+.form-group{margin-bottom:18px}.form-group label{display:block;font-weight:600;font-size:0.9rem;margin-bottom:6px;color:var(--text)}
+.form-group input,.form-group select,.form-group textarea{width:100%;padding:12px 16px;border:1px solid var(--stroke);border-radius:12px;font-size:0.95rem;font-family:inherit;color:var(--text);background:white}
+.form-group input:focus,.form-group select:focus,.form-group textarea:focus{outline:none;border-color:var(--accent);box-shadow:0 0 0 3px rgba(91,124,255,0.12)}
+.form-group textarea{resize:vertical;min-height:90px}.form-submit{width:100%;padding:15px;font-size:1rem}
+.form-message{text-align:center;padding:14px;border-radius:12px;font-size:0.93rem;font-weight:600;margin-top:18px;display:none}
+.form-message.success{display:block;background:var(--success);color:var(--success-text)}.form-message.error{display:block;background:var(--error);color:var(--error-text)}
+footer{padding:50px 0 40px;border-top:1px solid rgba(15,23,42,0.07);background:rgba(255,255,255,0.4)}
+.footer-grid{display:flex;justify-content:space-between;gap:32px;flex-wrap:wrap;margin-bottom:28px}.footer-brand-col{min-width:200px}.footer-brand-col p{color:var(--muted);font-size:0.88rem;margin-top:8px}
+.footer-col h4{font-size:0.85rem;text-transform:uppercase;letter-spacing:0.08em;color:var(--muted);margin-bottom:14px}.footer-col ul{display:grid;gap:10px}
+.footer-col a{color:var(--muted);font-size:0.9rem}.footer-col a:hover{color:var(--text)}
+.footer-bottom{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;padding-top:22px;border-top:1px solid var(--stroke)}.footer-bottom p{color:var(--muted-light);font-size:0.82rem}
+@keyframes fadeInUp{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:translateY(0)}}
+.reveal{opacity:0;transform:translateY(24px);transition:opacity 0.6s ease,transform 0.6s ease}.reveal.visible{opacity:1;transform:translateY(0)}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:0.01ms!important;transition-duration:0.01ms!important;scroll-behavior:auto!important}}
+@media(max-width:1024px){.hero-grid{grid-template-columns:1fr;gap:36px}.hero-demo{max-width:500px;margin:0 auto}.steps-grid{grid-template-columns:repeat(2,1fr)}.steps-grid::before{display:none}.benefits-grid,.problems-grid,.onboarding-grid,.pricing-grid{grid-template-columns:repeat(2,1fr)}.pricing-card.featured{transform:none;margin-top:20px}.objections-grid{grid-template-columns:1fr}}
+@media(max-width:700px){.nav-links{display:none;position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(245,247,251,0.97);backdrop-filter:blur(20px);flex-direction:column;align-items:center;justify-content:center;gap:20px;z-index:100;font-size:1.15rem}.nav-links.open{display:flex}.nav-cta.desktop{display:none}.hamburger{display:flex}section{padding:64px 0}.hero{padding:40px 0 44px}.hero-actions{flex-direction:column;align-items:stretch}.hero-actions .btn{justify-content:center}.steps-grid{grid-template-columns:1fr}.benefits-grid,.problems-grid,.onboarding-grid,.pricing-grid{grid-template-columns:1fr}.pricing-card.featured{margin-top:0}.nfc-card{flex-direction:column;text-align:center;align-items:center}.objections-grid{grid-template-columns:1fr}.footer-grid{flex-direction:column;gap:24px}.footer-bottom{flex-direction:column;text-align:center}}
 </style>
 </head>
 <body>
@@ -87,3 +177,153 @@ section{padding:96px 0}
 <button class="hamburger" id="hamburger" aria-label="Menü öffnen" aria-expanded="false"><span></span><span></span><span></span></button>
 </div>
 </header>
+<main>
+<section class="hero" id="hero">
+<div class="container hero-grid">
+<div class="hero-text">
+<div class="hero-eyebrow">Der KI-Assistent für deinen guten Ruf</div>
+<h1>Jede Bewertung verdient eine <span class="highlight">Antwort</span>. Du nicht noch eine Aufgabe.</h1>
+<p class="hero-lead">Reputivo kümmert sich um deine Google-Bewertungen. Du erhältst passende Antwortvorschläge direkt auf WhatsApp, passt sie mit deiner KI an und gibst sie frei – damit du dich auf dein Geschäft konzentrieren kannst.</p>
+<div class="hero-actions"><a href="#demo-form" class="btn btn-primary btn-lg">Kostenlose Demo ansehen</a><a href="#loesung" class="btn btn-secondary btn-lg">So funktioniert's</a></div>
+<p class="hero-micro">Für Restaurants, Cafés, Friseure, Beauty-Studios, Werkstätten und lokale Dienstleister.</p>
+</div>
+<div class="hero-demo" aria-label="Produkt-Demo">
+<div class="demo-label">Produkt-Demo</div>
+<div class="demo-header"><span class="demo-header-dot"></span><span class="demo-header-label">Reputivo Assistant</span><span class="demo-header-badge">Live</span></div>
+<div class="chat-bubbles" id="heroChat">
+<div class="chat-bubble system visible">📋 Neue 4-Sterne-Bewertung erkannt</div>
+<div class="chat-bubble incoming"><strong>Gast • vor 12 Min.</strong>„Das Essen war hervorragend, der Service sehr freundlich."</div>
+<div class="chat-bubble incoming"><strong>🤖 Antwortvorschlag</strong>Vielen Dank für deine tolle Bewertung! Wir nehmen den Hinweis zur Wartezeit ernst und arbeiten daran. Bis zum nächsten Mal!</div>
+<div class="chat-bubble outgoing">Bitte persönlicher formulieren und den Namen erwähnen.</div>
+<div class="chat-bubble incoming"><strong>🤖 Angepasster Vorschlag</strong>Lieber Gast, herzlichen Dank! Dein Hinweis zur Wartezeit ist wertvoll. Wir freuen uns auf deinen nächsten Besuch!</div>
+<div class="chat-bubble outgoing">Perfekt, bitte veröffentlichen.</div>
+</div>
+<div class="demo-status"><span id="heroDemoStatus">Schritt 1 von 7</span><span class="pill pill-default" id="heroDemoPill">läuft…</span></div>
+<section id="problem">
+<div class="container">
+<div class="section-header reveal"><div class="section-label">Das Problem</div><h2>Während du dein Unternehmen führst, warten deine Bewertungen.</h2><p>Jede unbeantwortete Bewertung ist eine verpasste Chance.</p></div>
+<div class="problems-grid">
+<div class="problem-card reveal"><div class="problem-icon">⏳</div><h3>Unbeantwortete Bewertungen hinterlassen Fragen</h3><p>Wenn Kunden sehen, dass auf Feedback nicht reagiert wird, entsteht ein unvollständiger Eindruck.</p></div>
+<div class="problem-card reveal"><div class="problem-icon">🕐</div><h3>Manuelles Prüfen kostet wertvolle Zeit</h3><p>Zwischen Kunden und Betrieb bleibt kaum Zeit, regelmäßig Google-Bewertungen zu checken.</p></div>
+<div class="problem-card reveal"><div class="problem-icon">💭</div><h3>Auf Kritik professionell reagieren ist anspruchsvoll</h3><p>Die richtigen Worte zu finden – vor allem bei kritischen Bewertungen – erfordert Fingerspitzengefühl.</p></div>
+</div></div></section>
+<section id="loesung">
+<div class="container">
+<div class="section-header reveal"><div class="section-label">Die Lösung</div><h2>Professionelles Bewertungsmanagement. Direkt in deiner Hosentasche.</h2><p>Vier einfache Schritte – von der Bewertung bis zur veröffentlichten Antwort.</p></div>
+<div class="steps-grid reveal">
+<div class="step-card"><div class="step-num">1</div><h3>Neue Bewertung</h3><p>Ein Kunde hinterlässt eine Google-Bewertung. Reputivo erkennt sie automatisch.</p></div>
+<div class="step-card"><div class="step-num">2</div><h3>KI erstellt Antwort</h3><p>Unsere KI erstellt eine passende, professionelle Antwortvorlage.</p></div>
+<div class="step-card"><div class="step-num">3</div><h3>Benachrichtigung auf WhatsApp</h3><p>Du erhältst Bewertung und Antwortvorschlag direkt auf dein Smartphone.</p></div>
+<div class="step-card"><div class="step-num">4</div><h3>Prüfen und veröffentlichen</h3><p>Du passt die Antwort an, gibst sie frei und Reputivo veröffentlicht sie.</p></div>
+</div></div></section>
+<section id="ergebnis">
+<div class="container">
+<div class="section-header reveal"><div class="section-label">Dein Ergebnis</div><h2>Mehr Zeit für dein Geschäft. Mehr Kontrolle über deinen guten Ruf.</h2><p>Reputivo übernimmt die Routine. Du behältst den Überblick – und die Entscheidung.</p></div>
+<div class="benefits-grid">
+<div class="benefit-card reveal"><div class="benefit-icon">🔔</div><h3>Keine Bewertung bleibt unbemerkt</h3><p>Sobald ein Kunde eine Bewertung hinterlässt, wirst du benachrichtigt.</p></div>
+<div class="benefit-card reveal"><div class="benefit-icon">✨</div><h3>Professionell auf jedes Feedback reagieren</h3><p>Die KI erstellt für jede Bewertung eine passende, wertschätzende Antwort.</p></div>
+<div class="benefit-card reveal"><div class="benefit-icon">🎯</div><h3>Volle Kontrolle über jede Antwort</h3><p>Du prüfst, passt an oder genehmigst. Keine Antwort ohne deine Zustimmung.</p></div>
+</div></div></section>
+<section id="demo">
+<div class="container">
+<div class="section-header reveal"><div class="section-label">Produkt-Demo</div><h2>Sieh selbst, wie einfach es funktioniert.</h2></div>
+<div class="demo-showcase reveal">
+<div class="demo-header"><span class="demo-header-dot"></span><span class="demo-header-label">Reputivo Assistant</span><span class="demo-header-badge">Demo</span></div>
+<div class="chat-bubbles" id="showcaseChat">
+<div class="chat-bubble system" data-step="1">📋 Neue 5-Sterne-Bewertung erkannt</div>
+<div class="chat-bubble incoming" data-step="2"><strong>Anna M. • vor 8 Min.</strong>„Ich komme seit Jahren hierher. Das Team ist fantastisch!"</div>
+<div class="chat-bubble incoming" data-step="3"><strong>🤖 Antwortvorschlag</strong>Liebe Anna, vielen Dank für deine Treue und die wunderbare Bewertung!</div>
+<div class="chat-bubble outgoing" data-step="4">Kannst du den Ton wärmer machen?</div>
+<div class="chat-bubble incoming" data-step="5"><strong>🤖 Angepasst</strong>Liebe Anna, wow – vielen Dank! 🤩</div>
+<div class="chat-bubble outgoing" data-step="6">Perfekt, bitte veröffentlichen.</div>
+<div class="chat-bubble system" data-step="7">✅ Antwort veröffentlicht</div>
+</div>
+<div class="demo-status"><span id="showcaseStatus">Schritt 1 von 7</span><span class="pill pill-default" id="showcasePill">bereit</span></div>
+<div class="demo-controls">
+<button class="demo-control-btn" id="demoPrev" disabled>◀</button>
+<div class="demo-step-indicator" id="demoSteps"><span class="demo-dot active"></span><span class="demo-dot"></span><span class="demo-dot"></span><span class="demo-dot"></span><span class="demo-dot"></span><span class="demo-dot"></span><span class="demo-dot"></span></div>
+<button class="demo-control-btn" id="demoPlay">▶</button>
+<button class="demo-control-btn" id="demoNext">▶▶</button>
+</div></div></div></section>
+<section id="setup">
+<div class="container">
+<div class="section-header reveal"><div class="section-label">Einstieg</div><h2>In drei Schritten zum besseren Bewertungsmanagement</h2><p>Keine technischen Vorkenntnisse nötig. Einfach einrichten und loslegen.</p></div>
+<div class="onboarding-grid">
+<div class="onboard-card reveal"><div class="onboard-num">1</div><h3>Google-Konto verbinden</h3><p>Du autorisierst Reputivo einmalig für den Zugriff auf deine Bewertungen.</p></div>
+<div class="onboard-card reveal"><div class="onboard-num">2</div><h3>WhatsApp verknüpfen</h3><p>Wir senden dir Benachrichtigungen und Vorschläge direkt auf dein WhatsApp.</p></div>
+<div class="onboard-card reveal"><div class="onboard-num">3</div><h3>Erste Bewertung erhalten</h3><p>Sobald eine neue Bewertung eingeht, wirst du benachrichtigt.</p></div>
+</div></div></section>
+<section id="preise">
+<div class="container">
+<div class="section-header reveal"><div class="section-label">Preise</div><h2>Fair und transparent.</h2><p>Alle Preise zzgl. MwSt. Keine versteckten Kosten.</p></div>
+<div class="pricing-grid reveal">
+<div class="pricing-card"><div class="pricing-name">Essential</div><div class="pricing-subtitle">Für Unternehmen, die den Überblick behalten wollen.</div><div class="pricing-price">€19,90</div><div class="pricing-period">pro Monat</div><ul class="pricing-features"><li>Automatische Erkennung neuer Bewertungen</li><li>KI-generierte Antwortvorschläge</li><li>WhatsApp-Benachrichtigungen</li><li>Manuelle Freigabe</li><li>1 Google-Standort</li></ul><div class="pricing-cta"><a href="#demo-form" class="btn btn-secondary">Demo anfragen</a></div></div>
+<div class="pricing-card featured"><div class="pricing-badge">Am beliebtesten</div><div class="pricing-name">Growth</div><div class="pricing-subtitle">Für professionelles Bewertungsmanagement mit minimalem Aufwand.</div><div class="pricing-price">€39,90</div><div class="pricing-period">pro Monat</div><ul class="pricing-features"><li>Alles aus Essential</li><li>Personalisierte Anpassung per Chat</li><li>Priorisierte KI-Verarbeitung</li><li>Bis zu 3 Standorte</li><li>Individuelle Tonalität</li></ul><div class="pricing-cta"><a href="#demo-form" class="btn btn-primary">Demo anfragen</a></div></div>
+<div class="pricing-card"><div class="pricing-name">Business</div><div class="pricing-subtitle">Für Unternehmen mit mehreren Standorten.</div><div class="pricing-price">€69,90</div><div class="pricing-period">pro Monat</div><ul class="pricing-features"><li>Alles aus Growth</li><li>Bis zu 10 Standorte</li><li>Zentrale Übersicht</li><li>Priorisierter Support</li><li>Erweiterte Optionen</li></ul><div class="pricing-cta"><a href="#demo-form" class="btn btn-secondary">Demo anfragen</a></div></div>
+</div>
+<div class="nfc-card reveal"><div class="nfc-icon">📱</div><div class="nfc-info"><h3>NFC & QR Reputation Kit</h3><p>Hochwertige NFC-Karten oder QR-Aufsteller für deinen Empfangsbereich. Optional zu jedem Plan. Preis auf Anfrage.</p></div><div class="nfc-cta"><a href="#demo-form" class="btn btn-secondary">Mehr erfahren</a></div></div>
+</div></section>
+
+<section id="fragen">
+<div class="container">
+<div class="section-header reveal"><div class="section-label">Fragen & Antworten</div><h2>Was du wissen solltest, bevor du startest.</h2></div>
+<div class="objections-grid reveal">
+<div class="objection-card"><div class="q">Ist die Einrichtung kompliziert?</div><div class="a">Nein. Du verbindest einmalig dein Google-Konto und WhatsApp. Danach läuft alles automatisch.</div></div>
+<div class="objection-card"><div class="q">Brauche ich technisches Vorwissen?</div><div class="a">Nein. Die gesamte Interaktion läuft über WhatsApp – so einfach wie eine Textnachricht.</div></div>
+<div class="objection-card"><div class="q">Kann die KI ohne meine Zustimmung veröffentlichen?</div><div class="a">Nein. Jede Antwort muss von dir aktiv freigegeben werden. Du hast die volle Kontrolle.</div></div>
+<div class="objection-card"><div class="q">Kann ich die Antworten ändern?</div><div class="a">Ja, jederzeit. Du kannst über den Chat beliebig anpassen, umformulieren oder neu schreiben lassen.</div></div>
+<div class="objection-card"><div class="q">Funktioniert das nur über WhatsApp?</div><div class="a">Die Interaktion läuft aktuell über WhatsApp, weil es das Tool ist, das die meisten Geschäftsinhaber bereits nutzen.</div></div>
+<div class="objection-card"><div class="q">Wie autorisiere ich mein Google-Konto?</div><div class="a">Einmalige Anmeldung über einen sicheren, standardisierten Google-Prozess.</div></div>
+<div class="objection-card"><div class="q">Was passiert mit negativen Bewertungen?</div><div class="a">Die KI erstellt auch für kritische Bewertungen einen respektvollen Antwortvorschlag. Du entscheidest.</div></div>
+<div class="objection-card"><div class="q">Kann ich mehrere Standorte verwalten?</div><div class="a">Ja, ab Growth (3 Standorte) und Business (10 Standorte).</div></div>
+</div></div></section>
+<section id="faq">
+<div class="container">
+<div class="section-header reveal"><div class="section-label">FAQ</div><h2>Häufig gestellte Fragen</h2></div>
+<div class="faq-list reveal">
+<div class="faq-item"><button class="faq-question" aria-expanded="false">Wie lange dauert es, bis eine Bewertung erkannt wird?</button><div class="faq-answer"><div class="faq-answer-inner">Reputivo prüft regelmäßig. In der Regel wirst du innerhalb weniger Minuten benachrichtigt.</div></div></div>
+<div class="faq-item"><button class="faq-question" aria-expanded="false">Kann ich den Tarif jederzeit wechseln?</button><div class="faq-answer"><div class="faq-answer-inner">Ja, Tarifwechsel sind flexibel möglich.</div></div></div>
+<div class="faq-item"><button class="faq-question" aria-expanded="false">Gibt es eine Mindestvertragslaufzeit?</button><div class="faq-answer"><div class="faq-answer-inner">Nein. Alle Tarife sind monatlich kündbar.</div></div></div>
+<div class="faq-item"><button class="faq-question" aria-expanded="false">Was passiert mit meinen Daten?</button><div class="faq-answer"><div class="faq-answer-inner">Wir verarbeiten nur die für den Betrieb notwendigen Daten. Details in unserer Datenschutzerklärung.</div></div></div>
+<div class="faq-item"><button class="faq-question" aria-expanded="false">Kann ich Reputivo vor dem Kauf testen?</button><div class="faq-answer"><div class="faq-answer-inner">Ja, buche eine kostenlose Demo. Wir zeigen dir persönlich, wie Reputivo funktioniert.</div></div></div>
+<section id="cta-final">
+<div class="container"><div class="cta-final reveal">
+<h2>Dein guter Ruf sollte nicht an deinem Zeitplan scheitern.</h2>
+<p>Entdecke in einer persönlichen Demo, wie einfach professionelles Bewertungsmanagement sein kann.</p>
+<a href="#demo-form" class="btn btn-primary btn-lg">Kostenlose Demo vereinbaren</a>
+</div></div></section>
+<section id="demo-form">
+<div class="container"><div class="demo-form-card reveal">
+<h2 style="text-align:center;margin-bottom:8px">Demo anfragen</h2>
+<p style="text-align:center;color:var(--muted);margin-bottom:28px">Wir melden uns innerhalb eines Werktages bei dir.</p>
+<form id="contactForm" novalidate>
+<div class="form-group"><label for="name">Name *</label><input type="text" id="name" name="name" required placeholder="Dein Vor- und Nachname" autocomplete="name"/></div>
+<div class="form-group"><label for="business">Unternehmen *</label><input type="text" id="business" name="business" required placeholder="Name deines Unternehmens"/></div>
+<div class="form-group"><label for="email">E-Mail *</label><input type="email" id="email" name="email" required placeholder="deine@email.de" autocomplete="email"/></div>
+<div class="form-group"><label for="phone">Telefon (optional)</label><input type="tel" id="phone" name="phone" placeholder="Für Rückfragen"/></div>
+<div class="form-group"><label for="plan">Tarif</label><select id="plan" name="plan"><option value="">Bitte wählen</option><option value="essential">Essential – €19,90</option><option value="growth">Growth – €39,90</option><option value="business">Business – €69,90</option><option value="nfc">NFC/QR Kit</option><option value="unknown">Unentschlossen</option></select></div>
+<div class="form-group"><label for="message">Nachricht (optional)</label><textarea id="message" name="message" placeholder="Erzähl uns kurz von deinem Unternehmen…"></textarea></div>
+<button type="submit" class="btn btn-primary form-submit">Demo anfragen</button>
+<div class="form-message" id="formMessage"></div>
+</form>
+</div></div></section>
+</main>
+<footer>
+<div class="container">
+<div class="footer-grid">
+<div class="footer-brand-col"><a href="#" class="brand"><span class="brand-mark">R</span><span>Reputivo</span></a><p>KI-gestütztes Bewertungsmanagement für lokale Unternehmen.</p></div>
+<script>
+(function(){
+'use strict';
+var hb=document.getElementById('hamburger'),nl=document.getElementById('navLinks');
+if(hb&&nl){hb.addEventListener('click',function(){var o=nl.classList.toggle('open');hb.classList.toggle('active');hb.setAttribute('aria-expanded',o);document.body.style.overflow=o?'hidden':'';});nl.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){nl.classList.remove('open');hb.classList.remove('active');hb.setAttribute('aria-expanded','false');document.body.style.overflow='';});});}
+var tb=document.getElementById('topbar'),st=false;window.addEventListener('scroll',function(){if(!st){requestAnimationFrame(function(){tb.classList.toggle('scrolled',window.scrollY>20);st=false;});st=true;}},{passive:true});
+(function(){var b=document.querySelectorAll('#heroChat .chat-bubble'),se=document.getElementById('heroDemoStatus'),pe=document.getElementById('heroDemoPill');if(!b.length)return;var c=0,t=b.length,run=true;function s(i){b.forEach(function(b2,i2){if(i2<=i){b2.classList.add('visible');b2.style.position='relative';}else{b2.classList.remove('visible');b2.style.position='absolute';}});if(se)se.textContent='Schritt '+(i+1)+' von '+t;if(pe){pe.textContent=i>=t-1?'Veröffentlicht ✓':'läuft…';pe.className='pill '+(i>=t-1?'pill-published':'pill-default');}c=i;}function n(){if(c<t-1){s(c+1);}else{s(0);c=0;}}var iv=setInterval(function(){if(run)n();},3500);s(0);var hd=document.querySelector('.hero-demo');if(hd){hd.addEventListener('mouseenter',function(){run=false;});hd.addEventListener('mouseleave',function(){run=true;});}})();
+(function(){var b=document.querySelectorAll('#showcaseChat .chat-bubble'),se=document.getElementById('showcaseStatus'),pe=document.getElementById('showcasePill'),ds=document.querySelectorAll('#demoSteps .demo-dot'),pb=document.getElementById('demoPrev'),plb=document.getElementById('demoPlay'),nb=document.getElementById('demoNext');if(!b.length)return;var t=b.length,c=0,playing=false,pi;function s(i){b.forEach(function(b2,i2){if(i2<=i){b2.classList.add('visible');b2.style.position='relative';}else{b2.classList.remove('visible');b2.style.position='absolute';}});ds.forEach(function(d,i2){d.classList.toggle('active',i2<=i);});if(se)se.textContent='Schritt '+(i+1)+' von '+t;if(pe){pe.textContent=i>=t-1?'Veröffentlicht ✓':'bereit';pe.className='pill '+(i>=t-1?'pill-published':'pill-default');}c=i;pb.disabled=i===0;}function nx(){if(c<t-1){s(c+1);}else{stop();}}function pv(){if(c>0){s(c-1);}}function stop(){if(pi){clearInterval(pi);pi=null;}playing=false;if(plb)plb.textContent='▶';}function play(){if(c>=t-1)s(0);playing=true;if(plb)plb.textContent='⏸';pi=setInterval(function(){if(c<t-1){s(c+1);}else{stop();}},3000);}if(pb)pb.addEventListener('click',function(){stop();pv();});if(nb)nb.addEventListener('click',function(){stop();nx();});if(plb)plb.addEventListener('click',function(){playing?stop():play();});s(0);})();
+document.querySelectorAll('.faq-question').forEach(function(b){b.addEventListener('click',function(){var i=b.parentElement,o=i.classList.contains('open');document.querySelectorAll('.faq-item.open').forEach(function(oi){if(oi!==i){oi.classList.remove('open');oi.querySelector('.faq-question').setAttribute('aria-expanded','false');}});i.classList.toggle('open',!o);b.setAttribute('aria-expanded',!o);});});
+var fm=document.getElementById('contactForm'),fmg=document.getElementById('formMessage');if(fm){fm.addEventListener('submit',function(e){e.preventDefault();fmg.className='form-message';fmg.textContent='';var n=document.getElementById('name').value.trim(),bn=document.getElementById('business').value.trim(),em=document.getElementById('email').value.trim();if(!n||!bn||!em){fmg.className='form-message error';fmg.textContent='Bitte fülle alle Pflichtfelder aus.';return;}if(!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(em)){fmg.className='form-message error';fmg.textContent='Bitte gib eine gültige E-Mail-Adresse ein.';return;}var sb=fm.querySelector('.form-submit');sb.disabled=true;sb.textContent='Wird gesendet…';setTimeout(function(){fmg.className='form-message success';fmg.textContent='Vielen Dank! Wir melden uns innerhalb eines Werktages.';sb.disabled=false;sb.textContent='Demo anfragen';fm.reset();},1000);});}
+if(!window.matchMedia('(prefers-reduced-motion:reduce)').matches){var rvs=document.querySelectorAll('.reveal'),ro=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('visible');ro.unobserve(e.target);}});},{threshold:0.12});rvs.forEach(function(el){ro.observe(el);});}
+})();
+</script>
+</body>
+</html>
